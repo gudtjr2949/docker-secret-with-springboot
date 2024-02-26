@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="common.refactoring.member.repository.mybatis.MemberMapper">
+
+    <select id="findMemberByMemberIdx" resultType="common.refactoring.member.dto.Member">
+        SELECT
+            member_idx AS memberIdx,
+            email AS email,
+            password AS password,
+            name AS name
+        FROM member
+        WHERE member_idx = #{memberIdx}
+    </select>
+
+    <!--추가된 부분-->
+    <select id="findAllMember" resultType="common.refactoring.member.dto.Member">
+        SELECT
+            member_idx AS memberIdx,
+            email AS email,
+            password AS password,
+            name AS name
+        FROM member
+    </select>
+</mapper>
