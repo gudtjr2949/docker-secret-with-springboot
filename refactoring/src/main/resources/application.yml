@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: ${docker-secret-mysql-url}
+    username: ${docker-secret-mysql-user}
+    password: ${docker-secret-mysql-user-pw}
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:mybatis/mapper/*.xml
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
