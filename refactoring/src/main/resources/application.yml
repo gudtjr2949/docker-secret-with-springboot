@@ -4,6 +4,9 @@ spring:
     username: ${docker-secret-mysql-user}
     password: ${docker-secret-mysql-user-pw}
 
+docker-secret:
+  bind-path: /run/secrets
+
 mybatis:
   configuration:
     map-underscore-to-camel-case: true
