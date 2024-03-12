@@ -78,3 +78,9 @@ echo -n "DB_PASSWORD"| sudo docker secret create mysql-user-pw -
 ```shell
 sudo docker stack deploy -c docker-compose.yml refacotring
 ```
+
+</br>
+
+# Blog
+
+https://velog.io/@gudtjr2949/Docker-Secret-Spring-Boot-MySQL-1
