@@ -49,7 +49,6 @@ public class MatchServiceImpl implements MatchService {
                     sameCnt[(int) match.getMemberIdx()]++;
                 }
             }
-
         }
 
         for (Member member : allMember) {
